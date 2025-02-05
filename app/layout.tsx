@@ -10,10 +10,10 @@ const gill = localFont({
 
 export const metadata: Metadata = {
   title: "USAI",
-  description: "la description qui va ici guignol",
+  description: "in AI WE TRUST, $USAI we hodl.",
   openGraph: {
     title: "USAI",
-    description: "la description qui va ici guignol",
+    description: "in AI WE TRUST, $USAI we hodl.",
     url: "https://usai-army.xyz",
     siteName: "USAI",
     images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "USAI",
-    description: "la description qui va ici guignol",
+    description: "in AI WE TRUST, $USAI we hodl.",
     images: ["https://usai-army.xyz/imges/USAI-TYPO.png"],
   },
 };
