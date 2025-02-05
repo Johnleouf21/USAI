@@ -9,7 +9,7 @@ const Third = () => {
       boxShadow="md" 
       m={"auto"} 
       borderRadius={20} 
-      mt={10} 
+      mt={5} 
       bgColor={'#16183F'}
     >
       <Card.Body display="flex" flexDirection="column" height="100%" borderRadius={20}>

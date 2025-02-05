@@ -9,7 +9,7 @@ const Fourth = () => {
       boxShadow="md" 
       m="auto" 
       borderRadius={20} 
-      mt={10}
+      mt={5}
       backgroundImage="url('images/FLAG-BACKGROUND-MINI.png')" // Définition du fond
       backgroundSize="cover" 
       backgroundPosition="center"

@@ -9,7 +9,7 @@ const Fifth = () => {
       boxShadow="md" 
       m="auto" 
       borderRadius={20} 
-      my={10} 
+      my={5} 
       bgColor={'#0c0d24'}
     >
       <Card.Body display="flex" flexDirection="column" alignItems="center" height="100%">

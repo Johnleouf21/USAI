@@ -8,7 +8,7 @@ const Second = () => {
       maxW={"1024px"}  
       boxShadow="md" m={"auto"} 
       borderRadius={20} 
-      mt={10}
+      mt={5}
     >
       <Card.Body display="flex" bgColor='#a41d22' alignItems="center" height="100%" borderRadius={20} p={{base: 2, md: 5}}>
           <Text 
