@@ -21,13 +21,13 @@ const Fifth = () => {
           </Text>
 
           {/* 4 Colonnes */}
-          <Box display="grid" gridTemplateColumns="repeat(4, 1fr)" gap={4} width="100%">
+          <Box display="grid" color={'white'} gridTemplateColumns="repeat(4, 1fr)" gap={4} width="100%">
             <Text fontSize={{base: "10px",sm: "12px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}}>STEP 1</Text>
             <Text fontSize={{base: "10px",sm: "12px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}}>STEP 2</Text>
             <Text fontSize={{base: "10px",sm: "12px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}}>STEP 3</Text>
             <Text fontSize={{base: "10px",sm: "12px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}}>STEP 4</Text>
           </Box>
-          <Box display="grid" gridTemplateColumns="repeat(4, 1fr)" gap={4} mt={2} width="100%">
+          <Box display="grid" color={'white'} gridTemplateColumns="repeat(4, 1fr)" gap={4} mt={2} width="100%">
             <Text fontSize={{base: "10px",sm: "12px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}}>CREATE A PHANTOM WALLET</Text>
             <Text fontSize={{base: "10px",sm: "12px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}}>GET SOME $SOL</Text>
             <Text fontSize={{base: "10px",sm: "12px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}}>VISIT MOONSHOT</Text>

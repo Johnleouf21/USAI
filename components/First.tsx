@@ -12,7 +12,7 @@ const First = () => {
       borderRadius={20} 
       mt={{base: 20, xl:28}}
     >
-      <Card.Body display="flex" flexDirection="column" justifyContent="space-between" height="100%" borderRadius={20}>
+      <Card.Body display="flex" color={'white'} flexDirection="column" justifyContent="space-between" height="100%" borderRadius={20}>
         {/* Partie gauche avec Titre + Texte + Bouton */}
         <Box display="flex" flexDirection="column" flex="1" justifyContent="space-between" p={10}>
           <Text 

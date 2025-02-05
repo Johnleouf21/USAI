@@ -34,13 +34,13 @@ const Third = () => {
           >
             100% MEME. 100% AI. 100% PATRIOTIC CHAOS
           </Text>
-          <Heading 
+          <Heading color={'white'}
             fontSize={{base: "10px",sm: "12px",md: "16px",lg: "18px",xl: "24px","2xl": "24px"}} 
             my={4}
           >
             Uncle Saminator has taken over Twitter, Telegram, Reddit, Weibo, TikTok, and 4chan.
           </Heading>
-          <Heading 
+          <Heading color={'white'}
             fontSize={{base: "10px",sm: "12px",md: "16px",lg: "18px",xl: "24px","2xl": "24px"}}  
             mb={4}
           >
@@ -49,7 +49,7 @@ const Third = () => {
             It’s more patriotic than an eagle drinking Budweiser on a monster truck.
             The USAI Army is recruiting – Take the most absurd patriotism test ever.
           </Heading>
-          <Heading 
+          <Heading color={'white'}
             fontSize={{base: "10px",sm: "12px",md: "16px",lg: "18px",xl: "24px","2xl": "24px"}}  
             mb={4}
           >
@@ -78,6 +78,7 @@ const Third = () => {
             pr={4} 
             py={2} 
             borderRadius={10}
+            color={'white'}
           >
             <Text fontSize={{base: "12px",sm: "14px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}} fontWeight="bold" color="white">
               THE USAI
