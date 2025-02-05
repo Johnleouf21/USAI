@@ -35,13 +35,13 @@ const Third = () => {
             100% MEME. 100% AI. 100% PATRIOTIC CHAOS
           </Text>
           <Heading color={'white'}
-            fontSize={{base: "10px",sm: "12px",md: "16px",lg: "18px",xl: "24px","2xl": "24px"}} 
+            fontSize={{base: "14px",sm: "16px",md: "16px",lg: "18px",xl: "24px","2xl": "24px"}} 
             my={4}
           >
             Uncle Saminator has taken over Twitter, Telegram, Reddit, Weibo, TikTok, and 4chan.
           </Heading>
           <Heading color={'white'}
-            fontSize={{base: "10px",sm: "12px",md: "16px",lg: "18px",xl: "24px","2xl": "24px"}}  
+            fontSize={{base: "14px",sm: "16px",md: "16px",lg: "18px",xl: "24px","2xl": "24px"}}  
             mb={4}
           >
             The AI drops banger tweets and memes every 5 minutes.
@@ -50,7 +50,7 @@ const Third = () => {
             The USAI Army is recruiting – Take the most absurd patriotism test ever.
           </Heading>
           <Heading color={'white'}
-            fontSize={{base: "10px",sm: "12px",md: "16px",lg: "18px",xl: "24px","2xl": "24px"}}  
+            fontSize={{base: "14px",sm: "16px",md: "16px",lg: "18px",xl: "24px","2xl": "24px"}}  
             mb={4}
           >
             "What’s the greatest American movie?" (Correct answer: ALL OF THEM.)
