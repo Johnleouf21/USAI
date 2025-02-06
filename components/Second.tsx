@@ -36,7 +36,7 @@ const Second = () => {
             fontSize={{base: "12px",sm: "14px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}} 
             color='black' 
           >
-            0x42gjbneye6212byby444d65fxd56c5d16s5f
+            TBA
           </Heading>
           </Box>
       </Card.Body>
