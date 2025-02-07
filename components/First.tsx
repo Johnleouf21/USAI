@@ -19,12 +19,14 @@ const First = () => {
             fontSize={{ base: "24px", sm: "36px", md: "42px", lg: "52px", xl: "62px", "2xl": "62px" }}
             mt={{ base: 2, sm: 8, md: 12 }}
             lineHeight={0.5}
+            textShadow="2px 2px 0px #0c0d24"
           >
             THE <Text as="span" color="#a41d22">OFFICIAL</Text>
           </Text>
           <Text 
             fontSize={{base: "24px",sm: "36px",md: "42px",lg: "52px",xl: "62px","2xl": "62px"}} 
             mb={{base: 4,sm: 6,md: 10,lg: 10,xl: 10,"2xl": 10}}
+            textShadow="2px 2px 0px #0c0d24"
           >
             USAI TOKEN
           </Text>
@@ -59,7 +61,7 @@ const First = () => {
           ml="auto"
           display="flex" 
           justifyContent={{ base: "center", sm: "flex-end" }} 
-          mt={{ base: -10, sm: 0 }}
+          mt={{ base: -200, sm: 0 }}
           
         >
           <Image 

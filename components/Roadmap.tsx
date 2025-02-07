@@ -28,18 +28,18 @@ const Roadmap
         >
           {/* Phase Title */}
           <Text 
-            fontSize={{base: "12px",sm: "14px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}} 
+            fontSize={{base: "16px",sm: "18px",md: "22px",lg: "26px",xl: "32px","2xl": "32px"}} 
             color="white" mb={2} 
             textShadow="2px 2px 0px #0c0d24"
-            my={4}
+            my={{base: 4, lg: 8}}
           >
             {phaseData.phase}
           </Text>
 
           {/* Objective */}
           <Text 
-            fontSize={{base: "12px",sm: "14px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}} 
-            mb={4}>
+            fontSize={{base: "12px",sm: "14px",md: "16px",lg: "22px",xl: "26px","2xl": "26px"}} 
+            my={{base: 4, lg: 8}}>
             {phaseData.objective}
           </Text>
 
@@ -50,7 +50,7 @@ const Roadmap
               >
                 <Heading
                   fontSize={{base: "14px",sm: "16px",md: "16px",lg: "18px",xl: "24px","2xl": "24px"}}  
-                  color="#0c0d24"
+                  color="#0c0d24" lineHeight={1}
                 >
                   {detail}
                 </Heading>

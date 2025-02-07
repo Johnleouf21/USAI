@@ -16,21 +16,21 @@ const Third = () => {
         {/* Partie gauche avec Titre + Texte + Bouton */}
         <Box p={10}>
           <Text 
-            fontSize={{base: "12px",sm: "14px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}} 
+            fontSize={{base: "16px",sm: "18px",md: "22px",lg: "28px",xl: "34px","2xl": "36px"}} 
             color='#a41d22' 
             mt={{base: 2, md: 10}}
           >
             WHAT IS USAI? A MEMECOIN?
           </Text>
           <Text 
-            fontSize={{base: "12px",sm: "14px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}} 
+            fontSize={{base: "16px",sm: "18px",md: "22px",lg: "28px",xl: "34px","2xl": "36px"}} 
             color='#a41d22'
           >
             A CULT? A MOVEMENT? ALL OF THE ABOVE
           </Text>
           <Text 
             fontSize={{base: "12px",sm: "14px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}}  
-            mt={4}
+            my={8} color='white'
           >
             100% <Text as="span" color="#a41d22">MEME.</Text> 100% <Text as="span" color="#a41d22">AI.</Text> 100% <Text as="span" color="#a41d22">PATRIOTIC CHAOS</Text>
           </Text>
@@ -42,7 +42,7 @@ const Third = () => {
           </Heading>
           <Heading color={'white'} lineHeight={1.5}
             fontSize={{base: "14px",sm: "16px",md: "16px",lg: "18px",xl: "24px","2xl": "24px"}}  
-            mb={4}
+            my={4}
           >
             The AI drops banger tweets and memes every 5 minutes.
             It auto-replies to influencers, roasting them into oblivion.
