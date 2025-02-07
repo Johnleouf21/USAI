@@ -63,26 +63,26 @@ const Fifth = () => {
         {/* 🔴 3ème Partie : 3 Logos cliquables */}
         <Box display="flex" justifyContent="center" alignItems="center" gap={6} p={5}>
           <Link href="https://twitter.com" target='_blank'>
-            <Image src="images/X-LOGO.png" alt="Twitter" w="50px" />
+            <Image src="images/X-LOGO.png" alt="Twitter" w="30px" />
           </Link>
           <Link href="https://telegram.org" target='_blank'>
-            <Image src="images/TELEGRAM-LOGO.png" alt="Telegram" w="50px" />
+            <Image src="images/TELEGRAM-LOGO.png" alt="Telegram" w="30px" />
           </Link>
           <Link href="https://dexscreener.com/moonshot" target='_blank'>
-            <Image src="images/MOON-SHOT-LOGO.png" alt="Loonshot" w="50px" />
+            <Image src="images/MOON-SHOT-LOGO.png" alt="Loonshot" w="30px" />
           </Link>
-          {/*<Link href="https://reddit.com" >
-            <Image src="images/REDDIT-LOGO.png" alt="Twitter" w="50px" />
+          <Link href="https://reddit.com" >
+            <Image src="images/REDDIT-LOGO.png" alt="Twitter" w="30px" />
           </Link>
           <Link href="https://4chan.org" >
-            <Image src="images/4CHAN-LOGO.png" alt="Telegram" w="50px" />
+            <Image src="images/4CHAN-LOGO.png" alt="Telegram" w="30px" />
           </Link>
           <Link href="https://weibo.com" >
-            <Image src="images/WEIBO-LOGO.png" alt="Loonshot" w="50px" />
+            <Image src="images/WEIBO-LOGO.png" alt="Loonshot" w="30px" />
           </Link>
           <Link href="https://raydium.com" >
-            <Image src="images/RAYDIUM-LOGO.png" alt="Loonshot" w="50px" />
-          </Link>*/}
+            <Image src="images/RAYDIUM-LOGO.png" alt="Loonshot" w="30px" />
+          </Link>
         </Box>
 
       </Card.Body>

@@ -39,7 +39,8 @@ const Roadmap
           {/* Objective */}
           <Text 
             fontSize={{base: "12px",sm: "14px",md: "16px",lg: "22px",xl: "26px","2xl": "26px"}} 
-            my={{base: 4, lg: 8}}>
+            my={{base: 4, lg: 8}}
+            color={'black'}>
             {phaseData.objective}
           </Text>
 
