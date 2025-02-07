@@ -32,7 +32,7 @@ const Third = () => {
             fontSize={{base: "12px",sm: "14px",md: "18px",lg: "24px",xl: "32px","2xl": "32px"}}  
             mt={4}
           >
-            100% MEME. 100% AI. 100% PATRIOTIC CHAOS
+            100% <Text as="span" color="#a41d22">MEME.</Text> 100% <Text as="span" color="#a41d22">AI.</Text> 100% <Text as="span" color="#a41d22">PATRIOTIC CHAOS</Text>
           </Text>
           <Heading color={'white'} lineHeight={1.5}
             fontSize={{base: "14px",sm: "16px",md: "16px",lg: "18px",xl: "24px","2xl": "24px"}} 

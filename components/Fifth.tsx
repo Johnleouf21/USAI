@@ -35,10 +35,13 @@ const Fifth = () => {
           </Box>
 
           {/* Ligne d'images alignée avec les 4 colonnes */}
-          <Box display="grid" gridTemplateColumns="repeat(4, 1fr)" gap={4} width="100%" justifyContent="center" alignItems="center" mt={4} >
+          <Box display="grid" gridTemplateColumns="repeat(7, 1fr)" gap={4} width="100%" justifyContent="center" alignItems="center" mt={4} >
             <Image src="images/PHANTOM-LOGO.png" alt="Phantom" w="80px" m='auto' />
+            <Text color="#a41d22" fontSize={'36px'}>+</Text>
             <Image src="images/SOLANA-LOGO.png" alt="Solana" w="80px" m='auto'/>
+            <Text color="#a41d22" fontSize={'36px'}>+</Text>
             <Image src="images/MOON-SHOT-LOGO.png" alt="Moonshot" w="80px" m='auto'/>
+            <Text color="#a41d22" fontSize={'36px'}>=</Text>
             <Image src="images/USAI-HEAD.png" alt="USAI" w="80px" m='auto'/>
           </Box>
         </Box>
@@ -59,16 +62,16 @@ const Fifth = () => {
 
         {/* 🔴 3ème Partie : 3 Logos cliquables */}
         <Box display="flex" justifyContent="center" alignItems="center" gap={6} p={5}>
-          <Link href="https://twitter.com" >
+          <Link href="https://twitter.com" target='_blank'>
             <Image src="images/X-LOGO.png" alt="Twitter" w="50px" />
           </Link>
-          <Link href="https://telegram.org" >
+          <Link href="https://telegram.org" target='_blank'>
             <Image src="images/TELEGRAM-LOGO.png" alt="Telegram" w="50px" />
           </Link>
-          <Link href="https://moonshot.com" >
+          <Link href="https://dexscreener.com/moonshot" target='_blank'>
             <Image src="images/MOON-SHOT-LOGO.png" alt="Loonshot" w="50px" />
           </Link>
-          <Link href="https://reddit.com" >
+          {/*<Link href="https://reddit.com" >
             <Image src="images/REDDIT-LOGO.png" alt="Twitter" w="50px" />
           </Link>
           <Link href="https://4chan.org" >
@@ -79,7 +82,7 @@ const Fifth = () => {
           </Link>
           <Link href="https://raydium.com" >
             <Image src="images/RAYDIUM-LOGO.png" alt="Loonshot" w="50px" />
-          </Link>
+          </Link>*/}
         </Box>
 
       </Card.Body>
