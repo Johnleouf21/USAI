@@ -47,10 +47,13 @@ const Roadmap
           <List.Root gap={2}>
             {phaseData.details.map((detail, idx) => (
               <ListItem key={idx}
-              fontSize={{base: "14px",sm: "16px",md: "16px",lg: "18px",xl: "24px","2xl": "24px"}}  
-               color="#0c0d24"
               >
-               {detail}
+                <Heading
+                  fontSize={{base: "14px",sm: "16px",md: "16px",lg: "18px",xl: "24px","2xl": "24px"}}  
+                  color="#0c0d24"
+                >
+                  {detail}
+                </Heading>
               </ListItem>
             ))}
           </List.Root>
