@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider";
+import BackgroundMusic from "@/components/BackgroundMusic";
 
 const gill = localFont({
   src: "./fonts/gill-sans-ultra-bold/gill-sans-ultra-bold.ttf"
@@ -49,11 +50,11 @@ export default function RootLayout({
           backgroundSize: "100% auto", // La largeur est toujours 100%, la hauteur s'adapte
           backgroundPosition: "top", // L'image reste collée en haut
           backgroundRepeat: "no-repeat",
-          
         }}
       >
         <Provider>
           {children}
+          <BackgroundMusic/>
         </Provider>
       </body>
     </html>
