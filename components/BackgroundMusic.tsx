@@ -6,7 +6,7 @@ import { FaPlay, FaPause } from "react-icons/fa";
 
 const BackgroundMusic = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
 
   useEffect(() => {
@@ -16,20 +16,25 @@ const BackgroundMusic = () => {
     }
 
     const handleUserInteraction = () => {
-      setHasInteracted(true);
-      if (isPlaying && audioRef.current) {
-        audioRef.current.play().catch((err) => console.error("Playback failed", err));
+      if (!hasInteracted) {
+        setHasInteracted(true);
+        if (isPlaying && audioRef.current) {
+          audioRef.current.play().catch((err) => console.error("Playback failed", err));
+        }
       }
     };
 
+    // Ajouter les événements d'interaction utilisateur
     window.addEventListener("click", handleUserInteraction);
     window.addEventListener("keydown", handleUserInteraction);
+    window.addEventListener("wheel", handleUserInteraction); // Détection du scroll
 
     return () => {
       window.removeEventListener("click", handleUserInteraction);
       window.removeEventListener("keydown", handleUserInteraction);
+      window.removeEventListener("wheel", handleUserInteraction);
     };
-  }, [isPlaying]);
+  }, [isPlaying, hasInteracted]);
 
   const togglePlayPause = () => {
     if (audioRef.current) {
