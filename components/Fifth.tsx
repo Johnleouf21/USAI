@@ -62,7 +62,7 @@ const Fifth = () => {
 
         {/* 🔴 3ème Partie : 3 Logos cliquables */}
         <Box display="flex" justifyContent="center" alignItems="center" gap={6} p={5}>
-          <Link href="https://twitter.com" target='_blank'>
+          <Link href="https://x.com/usai_ai" target='_blank'>
             <Image src="images/X-LOGO.png" alt="Twitter" w="30px" />
           </Link>
           <Link href="https://telegram.org" target='_blank'>
