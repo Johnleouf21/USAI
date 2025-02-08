@@ -71,6 +71,9 @@ const Fifth = () => {
           <Link href="https://dexscreener.com/moonshot" target='_blank'>
             <Image src="images/MOON-SHOT-LOGO.png" alt="Loonshot" w="30px" />
           </Link>
+          <Link href="https://www.tiktok.com/@usai_project" target='_blank'>
+            <Image src="images/TIKTOK.png" alt="Loonshot" w="30px" />
+          </Link>
           <Link href="https://reddit.com" >
             <Image src="images/REDDIT-LOGO.png" alt="Twitter" w="30px" />
           </Link>
