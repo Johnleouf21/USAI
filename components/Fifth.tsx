@@ -80,7 +80,7 @@ const Fifth = () => {
           <Link href="https://weibo.com" >
             <Image src="images/WEIBO-LOGO.png" alt="Loonshot" w="30px" />
           </Link>
-          <Link href="https://raydium.com" >
+          <Link href="https://raydium.io" >
             <Image src="images/RAYDIUM-LOGO.png" alt="Loonshot" w="30px" />
           </Link>
         </Box>
