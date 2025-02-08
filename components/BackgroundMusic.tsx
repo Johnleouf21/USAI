@@ -1,40 +1,46 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Box, Button, Icon } from "@chakra-ui/react";
-import { FaPlay, FaPause } from "react-icons/fa";
+import { Box, Button, Icon, VStack, Text } from "@chakra-ui/react";
+import { FaPlay, FaPause, FaMusic } from "react-icons/fa";
+import { DialogRoot, DialogContent, DialogHeader, DialogFooter } from "@/components/ui/dialog";
 
 const BackgroundMusic = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [hasInteracted, setHasInteracted] = useState(false);
+  const [showPopup, setShowPopup] = useState(true);
 
   useEffect(() => {
     const savedState = localStorage.getItem("isPlaying");
+    const userAccepted = localStorage.getItem("musicAccepted");
+
     if (savedState === "true") {
       setIsPlaying(true);
     }
 
-    const handleUserInteraction = () => {
-      if (!hasInteracted) {
-        setHasInteracted(true);
-        if (isPlaying && audioRef.current) {
-          audioRef.current.play().catch((err) => console.error("Playback failed", err));
-        }
-      }
-    };
+    if (!userAccepted) {
+      setShowPopup(true);
+    } else {
+      attemptPlay();
+    }
+  }, []);
 
-    // Ajouter les événements d'interaction utilisateur
-    window.addEventListener("click", handleUserInteraction);
-    window.addEventListener("keydown", handleUserInteraction);
-    window.addEventListener("wheel", handleUserInteraction); // Détection du scroll
+  const attemptPlay = () => {
+    if (audioRef.current) {
+      audioRef.current.play().catch((err) => console.error("Autoplay failed:", err));
+    }
+  };
 
-    return () => {
-      window.removeEventListener("click", handleUserInteraction);
-      window.removeEventListener("keydown", handleUserInteraction);
-      window.removeEventListener("wheel", handleUserInteraction);
-    };
-  }, [isPlaying, hasInteracted]);
+  const handleAcceptMusic = (accepted: boolean) => {
+    setShowPopup(false);
+    if (accepted) {
+      setIsPlaying(true);
+      localStorage.setItem("musicAccepted", "true");
+      attemptPlay();
+    } else {
+      localStorage.setItem("musicAccepted", "true");
+    }
+  };
 
   const togglePlayPause = () => {
     if (audioRef.current) {
@@ -50,23 +56,67 @@ const BackgroundMusic = () => {
   };
 
   return (
-    <Box position="fixed" bottom="20px" right="20px" zIndex={1000}>
-      {/* Audio element */}
+    <>
+      {/* 🚀 MODAL Chakra UI v3 avec un meilleur design */}
+      <DialogRoot open={showPopup}>
+        <DialogContent
+          bg="gray.800"
+          color="white"
+          p={6}
+          borderRadius={10}
+          boxShadow="2xl"
+          textAlign="center"
+          maxW="400px"
+          m="auto"
+        >
+          <DialogHeader fontSize="xl" fontWeight="bold" display="flex" alignItems="center" justifyContent="center">
+            <Icon as={FaMusic} boxSize={6} color="yellow.300" mr={2} /> 🎵 Play Background Music?
+          </DialogHeader>
+          
+          <VStack gap={3} mt={3}>
+            <Text fontSize="md" color="gray.300">Do you want to enable background music?</Text>
+          </VStack>
+
+          <DialogFooter mt={5} display="flex" justifyContent="center" gap={4}>
+            <Button 
+              colorScheme="blue" 
+              onClick={() => handleAcceptMusic(true)}
+              bgGradient="linear(to-r, teal.400, blue.500)"
+              _hover={{ bgGradient: "linear(to-r, teal.500, blue.600)" }}
+            >
+              Yes, Play Music 🎶
+            </Button>
+
+            <Button 
+              colorScheme="gray" 
+              onClick={() => handleAcceptMusic(true)}
+              bg="gray.700"
+              _hover={{ bg: "gray.600" }}
+            >
+              No, Thanks ❌
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </DialogRoot>
+
+      {/* Audio player caché */}
       <audio ref={audioRef} src="/music/background-music.mp3" loop />
 
-      {/* Play/Pause Button */}
-      <Button 
-        onClick={togglePlayPause} 
-        bg="gray.800" 
-        color="white" 
-        _hover={{ bg: "gray.700" }} 
-        borderRadius="50%" 
-        p={4} 
-        boxShadow="lg"
-      >
-        <Icon as={isPlaying ? FaPause : FaPlay} boxSize={5} />
-      </Button>
-    </Box>
+      {/* Bouton Play/Pause flottant */}
+      <Box position="fixed" bottom="20px" right="20px" zIndex={1000}>
+        <Button 
+          onClick={togglePlayPause} 
+          bg="gray.800" 
+          color="white" 
+          _hover={{ bg: "gray.700" }} 
+          borderRadius="50%" 
+          p={4} 
+          boxShadow="lg"
+        >
+          <Icon as={isPlaying ? FaPause : FaPlay} boxSize={5} />
+        </Button>
+      </Box>
+    </>
   );
 };
 
